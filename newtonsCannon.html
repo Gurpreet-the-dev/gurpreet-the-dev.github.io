@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title> Newton's Cannon
+		</title>
+		<link rel = "stylesheet"
+		href = "styles.css">
+		
+	</head>
+	<body>
+		<h1 style = "font-size : 50px;color:#0000ff;text-align:center;">Newton's Cannon</h1>
+		<div style = "width:500px;height:500px;margin-left : auto;margin-right:auto;position:relative;">
+		<img src = "NewtonDrawing.jpg" width = "500" height = "500" style = "position:absolute;">
+		<canvas id = "trailCanvas" width = "500" height = "500" style = "position : absolute;">
+		</canvas>
+		<canvas id="theCanvas" width = "500" height = "500" style = "position:relative;">
+		Canvas not supported;Please update your browser;
+		</canvas>
+		</div>
+		<div style = "text-align : center;">
+		<input type = "button" value ="REFRESH" onclick = "clearTrails();">
+		</div>
+		<div style = "text-align : center;">
+		<input type = "button"  value = "FIRE!" onclick = "fireProjectile();">
+		Initial speed = <span id = "speedReadout">3000</span> m/s
+		<input type = "range" id = "speedSlider" min = "-8000" max = "8000" step = "100" value = "3000" oninput = "showSpeed();" onchange = "showSpeed();" >
+		</div>
+		<div style = "text-align : center;">
+		Vx = <span id = "currentVx">0</span> m/s
+		</div>
+		<div style = "text-align : center;">
+		 Vy = <span id = "currentVy">0</span> m/s
+		</div>
+		<p>This simulation is based on Issac Newton's famous thought experiment and illustration of firing
+a projectile from a high mountaintop at various speeds,as he described in a Treatise of the system of the world.</p>
+
+<a href = "https://www.khanacademy.org/science/physics">Physics Library</a>
+
+	<script src = "myscripts.js">
+	</script>
+	</body>
+</html>
